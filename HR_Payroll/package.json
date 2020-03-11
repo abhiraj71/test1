@@ -1,0 +1,36 @@
+{
+  "name": "HR_Payroll",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/cds": "^3",
+    "employee": "file:../employee/employee-1.0.0.tgz",
+    "express": "^4"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.1.1"
+  },
+  "cds": {
+    "requires": {
+      
+      
+      
+      "db": {
+        "kind": "sqlite",
+        "model": [
+          "db/",
+          "srv/",
+          "app/"
+        ],
+        "credentials": {
+          "database": "hr_Payroll.db"
+        }
+      }
+    }
+  }
+}
